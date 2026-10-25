@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence Learning Coach"
+  short_description: "Learn any subject with evidence and delayed practice"
+  default_prompt: "Use $evidence-learning-coach to start or continue my learning plan."

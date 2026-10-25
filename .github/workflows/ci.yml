@@ -1,0 +1,19 @@
+name: Validate learning coach
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Test the standard-library tools
+        run: python3 -m unittest discover -s tests -v
+      - name: Build distribution archives
+        run: python3 scripts/package.py
